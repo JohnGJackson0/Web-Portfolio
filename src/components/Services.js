@@ -8,7 +8,7 @@ const Services = () => {
       <h1 className="py-5">Services</h1>
       <div className="container">
         <div className="row">
-          <div className="col-md-3 col-sm-6">
+          <div className="col-lg-3 col-md-6 col-sm-6">
             <div className="box">
               <div className="circle">
                 <IconContext.Provider value={{ size: "40" }}>
@@ -23,7 +23,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="col-md-3 col-sm-6">
+          <div className="col-lg-3 col-md-6 col-sm-6">
             <div className="box">
               <div className="circle">
                 <IconContext.Provider
@@ -42,7 +42,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="col-md-3 col-sm-6">
+          <div className="col-lg-3 col-md-6 col-sm-6">
             <div className="box">
               <div className="circle">
                 <IconContext.Provider value={{ size: "40" }}>
@@ -56,7 +56,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="col-md-3 col-sm-6">
+          <div className="col-lg-3 col-md-6 col-sm-6">
             <div className="box">
               <div className="circle">
                 <IconContext.Provider value={{ size: "40" }}>
