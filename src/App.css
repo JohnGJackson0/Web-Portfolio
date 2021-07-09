@@ -10,6 +10,7 @@
   --primary-red: #ef4035;
   --primary-hover-red: #f35501;
   --bootrap-dark-navbar: #212529;
+  --primary-black: #000000;
 }
 
 body {
@@ -307,4 +308,52 @@ nav ul li {
     width: 100%;
     direction: ltr;
   }
+}
+
+/************ PORTFOLIO ************/
+
+.portfolio-wrapper {
+  background: var(--primary-light-grey);
+  padding: 3rem 0;
+}
+
+.portfolio-image {
+  width: 15rem;
+  border: 0.06rem solid var(--primary-orange);
+  padding: 0.5rem;
+}
+
+.portfolio-image-box {
+  position: relative;
+  margin: 5px;
+}
+
+.overflow {
+  position: absolute;
+  opacity: 0;
+  background: var(--primary-black);
+  width: 15rem;
+  height: 100%;
+  top: 0;
+  border: 0.06rem solid var(--primary-red);
+  cursor: pointer;
+}
+
+.portfolio-image-box:hover .overflow {
+  opacity: 60%;
+  transition: 0.3s ease-in-out;
+}
+
+.portfolio-icon {
+  position: absolute;
+  opacity: 0;
+  margin-left: -50%;
+  margin-top: 75%;
+  color: var(--primary-orange);
+}
+
+.portfolio-image-box:hover .portfolio-icon {
+  opacity: 100%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
