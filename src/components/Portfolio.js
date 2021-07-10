@@ -18,32 +18,23 @@ import MyNutrition2 from "../images/MYNUTRITION2.png";
 import MyNutrition3 from "../images/MYNUTRITION3.png";
 import MyNutrition4 from "../images/MYNUTRITION4.png";
 import MyNutrition5 from "../images/MYNUTRITION5.png";
-import { FaSearchPlus } from "react-icons/fa";
+import { FaSearchPlus, FaTheRedYeti } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { PopupboxManager, PopupboxContainer } from "react-popupbox";
+import "react-popupbox/dist/react-popupbox.css";
 
 const Portfolio = () => {
   const openpopupboxGoStat = () => {
     const content = (
-      <>
-        <img src={GoStat1} alt="goStat Project" />
+      <div>
+        <img className="portfolio-image-popupbox" src={GoStat2} alt="goStat" />
         <p>
           App created in the native Android SDK.
           <br />
           This is an inference statistics calculator for students learning
-          elementary statistics. Just like ti-84 calculator a student can use a
-          phone to input data, calculate statistics and compare but this
-          calculator comes with the benefit of being more explicit in what is
-          going on and bringing insights to the data. Written in Java and
-          eventually will be ported to Kotlin.
-          <br />
-          • Clean Architecture, Clean Coding - Uses Android Room ORM, Live Data
-          (observer pattern), Factory Patterns, OOP & Functional paradigms
-          Java/Kotlin, DIAP, and soon Clean Architecture.
-          <br />• UI Responsive Design - Utilizes Material Design and Responsive
-          Mobile design.
+          elementary statistics.
         </p>
-        <b>GitHub:</b>{" "}
+        <b>GitHub:</b>
         <a
           href=""
           className="hyper-link"
@@ -53,29 +44,80 @@ const Portfolio = () => {
         >
           https://github.com/jgjio/GoStat
         </a>
-      </>
+      </div>
     );
-    PopupboxManager.open({ content });
+
+    PopupboxManager.open({
+      content,
+      config: {
+        titleBar: {
+          enable: true,
+          text: "Go Stats",
+        },
+        fadeIn: true,
+        fadeInSpeed: 500,
+      },
+    });
   };
 
-  const popupboxConfigGoStat = {};
+  const openpopupboxMyNutrition = () => {
+    const content = (
+      <div>
+        <img
+          className="portfolio-image-popupbox"
+          src={MyNutrition3}
+          alt="My Nutrition"
+        />
+        <p>
+          App created in the React Native framework.
+          <br />
+          This is a calorie counter for people trying to gain, maintain or lose
+          weight.
+        </p>
+        <b>GitHub:</b>
+        <a
+          href=""
+          className="hyper-link"
+          onClick={() => {
+            window.open("https://github.com/jgjio/my-nutrition");
+          }}
+        >
+          https://github.com/jgjio/my-nutrition
+        </a>
+      </div>
+    );
+
+    PopupboxManager.open({
+      content,
+      config: {
+        titleBar: {
+          enable: true,
+          text: "My Nutrition",
+        },
+        fadeIn: true,
+        fadeInSpeed: 500,
+      },
+    });
+  };
 
   return (
     <div className="portfolio-wrapper">
       <div className="container">
         <h1 className="text-uppercase text-center py-5">Portfolio</h1>
-        <div
-          className="image-box-wrapper row row-cols-auto justify-content-center ">
-          <div className="portfolio-image-box" onClick={openpopupboxGoStat()}>
-            <img
-              className="portfolio-image"
-              src={MyNutrition1}
-              alt="nutrition app"
-            />
-            <div className="overflow" onClick={openpopupboxGoStat()}></div>
-            <IconContext.Provider value={{ size: "30" }}>
-              <FaSearchPlus className="portfolio-icon" />
-            </IconContext.Provider>
+        <PopupboxContainer />
+        <div className="image-box-wrapper row row-cols-auto justify-content-center ">
+          <div className="portfolio-image-box">
+            <img className="portfolio-image" src={MyNutrition1} />
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxMyNutrition();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -84,7 +126,16 @@ const Portfolio = () => {
               src={MyNutrition2}
               alt="nutrition app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxMyNutrition();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -93,7 +144,16 @@ const Portfolio = () => {
               src={MyNutrition3}
               alt="nutrition app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxMyNutrition();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -102,7 +162,16 @@ const Portfolio = () => {
               src={MyNutrition4}
               alt="nutrition app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxMyNutrition();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -111,7 +180,16 @@ const Portfolio = () => {
               src={MyNutrition5}
               alt="nutrition app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxMyNutrition();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -120,7 +198,16 @@ const Portfolio = () => {
               src={GoStat1}
               alt="statistics app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxGoStat();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -129,7 +216,16 @@ const Portfolio = () => {
               src={GoStat2}
               alt="statistics app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxGoStat();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -138,7 +234,16 @@ const Portfolio = () => {
               src={GoStat3}
               alt="statistics app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxGoStat();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -147,7 +252,16 @@ const Portfolio = () => {
               src={GoStat4}
               alt="statistics app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxGoStat();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -156,7 +270,16 @@ const Portfolio = () => {
               src={GoStat5}
               alt="statistics app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxGoStat();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -165,7 +288,16 @@ const Portfolio = () => {
               src={GoStat6}
               alt="statistics app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxGoStat();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -174,7 +306,16 @@ const Portfolio = () => {
               src={GoStat7}
               alt="statistics app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxGoStat();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -183,7 +324,16 @@ const Portfolio = () => {
               src={GoStat8}
               alt="statistics app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxGoStat();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -192,7 +342,16 @@ const Portfolio = () => {
               src={GoStat9}
               alt="statistics app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxGoStat();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -201,7 +360,16 @@ const Portfolio = () => {
               src={GoStat10}
               alt="statistics app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxGoStat();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -210,7 +378,16 @@ const Portfolio = () => {
               src={GoStat11}
               alt="statistics app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxGoStat();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -219,7 +396,16 @@ const Portfolio = () => {
               src={GoStat12}
               alt="statistics app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxGoStat();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
@@ -228,20 +414,37 @@ const Portfolio = () => {
               src={GoStat13}
               alt="statistics app"
             />
-            <div className="overflow"></div>
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxGoStat();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
           <div className="portfolio-image-box">
-            <div className="overflow"></div>
             <img
               className="portfolio-image"
               src={GoStat14}
               alt="statistics app"
             />
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxGoStat();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
           </div>
           {/* */}
         </div>
-        <PopupboxContainer {...popupboxConfigGoStat} />
       </div>
     </div>
   );
