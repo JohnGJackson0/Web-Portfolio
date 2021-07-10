@@ -390,3 +390,31 @@ nav ul li {
     width: 10rem;
   }
 }
+
+/************ FOOTER ************/
+
+.footer {
+  background: var(--primary-dark);
+  color: var(--primary-dark-grey);
+  padding: 3rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--primary-dark-grey);
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: var(--primary-orange);
+  cursor: pointer;
+}
+
+.footer p {
+  margin-bottom: 0;
+  color: var(--primary-dark-grey);
+}
+
+.footer a {
+  color: var(--primary-dark-grey);
+}
