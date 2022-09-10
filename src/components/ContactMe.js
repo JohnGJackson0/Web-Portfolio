@@ -48,8 +48,9 @@ const ContactMe = () => {
       <div className="text-center">
         <h1>contact me</h1>
         <p>
-          Please fill out the form and describe your project needs and I will
-          contact you soon.
+          Please fill out the form or email&nbsp;
+          <a href="mailto: johngjackson0@gmail.com">JohnGJackson0@gmail.com</a>
+          &nbsp;directly.
         </p>
         <span className="success-message">{successMessage}</span>
         <div className="container">
@@ -134,7 +135,7 @@ const ContactMe = () => {
                   <textarea
                     type="text"
                     className="form-control"
-                    placeholder="Please describe what you are looking for and basic requirements of project"
+                    placeholder="Please put the subject of your inquiry and I will contact you soon"
                     {...register("content", {
                       required: "Please add content.",
                       minLength: {

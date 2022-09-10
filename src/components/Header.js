@@ -6,16 +6,17 @@ const Header = () => {
   return (
     <div id="home" className="header-wrapper">
       <div className="main-info">
-        <h1>Get Programming services in React / Native </h1>
+        <h1>Professional Programming Services</h1>
         <p className="typed-text">
           <Typed
             className="typed-text"
             strings={[
               "React Native",
-              "React Web",
-              "UI/UX Design",
-              "Full-Stack JS",
-              "Programming",
+              "AWS Lambda",
+              "Javascript",
+              "React",
+              "Android",
+              "Consulting",
             ]}
             typeSpeed={80}
             backSpeed={60}
@@ -29,7 +30,7 @@ const Header = () => {
           offset={-65}
           className="btn-main-offer"
         >
-          Let's Build Something.
+          Contact Me
         </Link>
       </div>
     </div>

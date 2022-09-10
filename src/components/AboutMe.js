@@ -16,31 +16,31 @@ const AboutMe = () => {
         <div className="col-lg-6 col-xm-12">
           <h1 className="about-heading">About me</h1>
           <p>
-            John Jackson is a Full-Stack React Native Developer with 2 years of
-            experience in Mobile Application Development. John is a
-            detail-oriented professional who specializes in React JS Native
-            framework, software architecture, and user experience. In the past,
-            he has managed to build applications in Android and React Native
-            (IOS and Android) that helps with nutritional information and
-            statistics.
-          </p>
-          <p>
+            John Jackson is an IT professional and college graduate with 2+
+            years of experience in developing hybrid mobile (React Native),
+            native mobile (Android), web and business applications.
+            <br />
+            <br />
+            Instrumental in all phases of SDLC, Computer Science, algorithms and
+            data structures. Includes in-depth knowledge of several
+            technologies: Javascript, Typescript, React Native, AWS Lambda,
+            Node, Mern, Java and others. <br />
+            <br />
             John has earned an undergraduate degree in Computer Science with a
             concentration in Computer Programming at the University of Baker
-            College. He specializes in; <br />
-            • Clean Architecture, Clean Coding
+            College. He specializes in;
             <br />
-            • API, Firebase and Library Integrations
             <br />
-            • Test Driven and Automation Testing <br />
-            • User Experience, UI Responsive Design <br />
-            • Resolve Bugs, Issues & Tracking <br />
-            • Team Collaboration & Communication
+            • Team Collaboration in Agile Scrum JIRA
             <br />
-          </p>
-          <p>
-            John Jackson is currently seeking React Native, or React JS
-            opportunities and can be reached at JohnGJackson0@gmail.com.
+            • App Publishing and SVN Github GIT CICD
+            <br />
+            • State Lib. Redux Flux MobX Saga Thunk
+            <br />
+            • API: RESTful Serverless AWS Node Express <br />
+            • TDD with JEST RNTL & E2E Detox ect. <br />
+            • Clean Architecture MVC OOP ect.
+            <br />
           </p>
         </div>
       </div>

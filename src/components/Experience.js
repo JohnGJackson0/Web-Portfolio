@@ -3,6 +3,18 @@ import React from "react";
 const Experience = () => {
   return (
     <div id="experience" className="experience">
+      <div className="text-center">
+        <p>
+          You can see this also on my LinkedIn:&nbsp;
+          <a href="https://www.linkedin.com/in/jgj0/">Connect on LinkedIn</a>
+        </p>
+        <p>
+          Please see an updated resume:&nbsp;
+          <a href="https://docs.google.com/document/d/1NW_OjemBdYfpn_3JUaf7GfWtomdYrTBS0qjAi_yM_bM/">
+            See my Resume
+          </a>
+        </p>
+      </div>
       <div className="d-flex justify-content-center my-5">
         <h1>experience</h1>
       </div>
@@ -38,7 +50,7 @@ const Experience = () => {
         <div className="timeline-block timeline-block-right">
           <div className="marker"></div>
           <div className="timeline-content">
-            <h3>April 2021 - Present</h3>
+            <h3>April 2021 - January 2022</h3>
             <p>
               Creates apps in the React Native framework. <br />
               <br />
@@ -54,6 +66,36 @@ const Experience = () => {
               <br />
               • Test Driven and Automation Testing - Updates following TDD,
               utilizing React Native Testing Library (RTNL).
+              <br />
+            </p>
+          </div>
+        </div>
+        <div className="timeline-block timeline-block-left">
+          <div className="marker"></div>
+          <div className="timeline-content">
+            <h3>January 2022 - Present</h3>
+            <p>
+              Working for Nexient, LLC full time on Levi's React Native mobile
+              application
+              <br />
+              <br />
+              • Team Collaboration in Agile Scrum JIRA: Maintains consistent
+              high velocity in a large collaborative team environment as a track
+              lead based on the agile/scrum methodology. Is effective at
+              estimating story points, refinement, facilitating backlog
+              management, scrum ceremonies, and updating JIRA, and other
+              bug/feature management systems.
+              <br />
+              • TDD with JEST RNTL & E2E Detox ect.: Created the infrastructure
+              and first unit tests using React Native @Testing-Library in the
+              application and completed testing many features to 100% coverage.
+              Wrote Testing Architecture documents and coached unfamiliar
+              developers on proper testing strategies and good practice.
+              <br />
+              • App Publishing and SVN Github GIT CICD: Works effectively with
+              GIT and Github and the MS branching strategy or alternative
+              branching strategies; can effectively cherry pick, rebase, merge,
+              stash, and git flow.
               <br />
             </p>
           </div>

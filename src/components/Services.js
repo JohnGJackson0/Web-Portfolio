@@ -17,9 +17,8 @@ const Services = () => {
               </div>
               <h3>React Native</h3>
               <p>
-                Professional services for the React Native framework which will
-                create one code-base that can be ran on both IOS and Android
-                natively.
+                Have maintained, unit tested, and architected solutions for
+                large production applications in the React Native library.
               </p>
             </div>
           </div>
@@ -35,11 +34,7 @@ const Services = () => {
                 </IconContext.Provider>
               </div>
               <h3>React Web</h3>
-              <p>
-                Professional web development services for the React framework
-                which creates one web-based application that can be ran and work
-                well on all types of devices.
-              </p>
+              <p>Have built professional websites using the React library.</p>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 col-sm-6">
@@ -49,10 +44,11 @@ const Services = () => {
                   <FaAndroid className="icon" />
                 </IconContext.Provider>
               </div>
-              <h3>Native Android</h3>
+              <h3>Lambda & Microservices</h3>
               <p>
-                Professional Android development services for the React
-                framework which is ran directly on Android devices.
+                Have deployed and worked with microservices using AWS Lambda and
+                the serverless Framework. Also have some experience in MERN and
+                other databases or servers in general.
               </p>
             </div>
           </div>
@@ -63,8 +59,13 @@ const Services = () => {
                   <FaCode className="icon" />
                 </IconContext.Provider>
               </div>
-              <h3>Javascript</h3>
-              <p>Professional Javascript programming for all types of uses.</p>
+              <h3>Architecture</h3>
+              <p>
+                Have experience in all phases of the software development
+                lifecycle taking buisness requirements and transfering it into
+                clean architecture and discovering technical solutions that meet
+                business needs.
+              </p>
             </div>
           </div>
         </div>

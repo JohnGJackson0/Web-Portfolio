@@ -1,7 +1,7 @@
 {
-  "name": "tanagr",
-  "homepage": "http://tanagr.com/",
-  "version": "0.1.0",
+  "name": "johngjackson",
+  "homepage": "http://johnjackson.me/",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",

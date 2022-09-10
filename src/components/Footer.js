@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-lg-4 col-md-6 col-sm-6">
             <div className="d-flex">
-              <p>City Flat Rock</p>
+              <p>City of Flat Rock</p>
             </div>
             <div className="d-flex">
               <a href="tel:313-316-0160">+1(313)316-0160</a>
@@ -33,17 +33,10 @@ const Footer = () => {
           <div className="col-lg-3 col-md-2 col-sm-6">
             <div className="row">
               <div className="col">
-                <a className="footer-nav">Home</a> <br />
-                <a className="footer-nav">About me</a> <br />
-                <a className="footer-nav">Services</a>
+                <a href="home" className="footer-nav">
+                  Back to top
+                </a>{" "}
                 <br />
-              </div>
-              <div className="col">
-                <a className="footer-nav">Experience</a>
-                <br />
-                <a className="footer-nav">Portfolio</a>
-                <br />
-                <a className="footer-nav">Contact me</a>
                 <br />
               </div>
             </div>
@@ -51,7 +44,7 @@ const Footer = () => {
           <div className="col-lg-5 col-md-5 col-sm-6 align-items-center">
             <div className="d-flex justify-content-center">
               <FacebookShareButton
-                url={"https://www.tanagr.com"}
+                url={"https://www.johnjackson.me"}
                 quote={
                   "Get Web and Mobile Software Services from a Full Stack Developer."
                 }
@@ -60,7 +53,7 @@ const Footer = () => {
                 <FacebookIcon className="mx-3" size={36}></FacebookIcon>
               </FacebookShareButton>
               <TwitterShareButton
-                url={"https://www.tanagr.com"}
+                url={"https://www.johnjackson.me"}
                 quote={
                   "Get Web and Mobile Software Services from a Full Stack Developer, specializes in React and React Native framework."
                 }
@@ -69,7 +62,7 @@ const Footer = () => {
                 <TwitterIcon className="mx-3" size={36}></TwitterIcon>
               </TwitterShareButton>
               <RedditShareButton
-                url={"https://www.tanagr.com"}
+                url={"https://www.johnjackson.me"}
                 quote={
                   "Get Web and Mobile Software Services from a Full Stack Developer, specializes in React and React Native framework."
                 }
@@ -78,7 +71,7 @@ const Footer = () => {
                 <RedditIcon className="mx-3" size={36}></RedditIcon>
               </RedditShareButton>
               <LinkedinShareButton
-                url={"https://www.tanagr.com"}
+                url={"https://www.johnjackson.me"}
                 quote={
                   "Get Web and Mobile Software Services from a Full Stack Developer, specializes in React and React Native framework."
                 }
@@ -89,7 +82,7 @@ const Footer = () => {
             </div>
             <p className="pt-3 text-center">
               Copyright&nbsp;&copy;&nbsp;
-              {new Date().getFullYear()}&nbsp;Tanagr | All Rights Reserved
+              {new Date().getFullYear()}&nbsp;John Jackson | All Rights Reserved
             </p>
           </div>
         </div>
