@@ -87,6 +87,17 @@ const Portfolio = () => {
           {PortfolioImageBox(openpopupboxGoDo, GoDo1, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo2, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo3, "Godo - TODO App")}
+          <div className="portfolio-image-box">
+            <p className="portfolio-image">
+              "oh "yuck" another task manager in a portfolio..". Nope, It is a
+              social network for coordinating tasks in a family unit, company or
+              other groups complete with login and task synchronization with
+              multiple accounts. Give me some credit.. micro-architecture, utc,
+              react native multi platform, and more. This has become an example
+              of clean architecture and how it can make UTC amazingly eazy. --
+              John Jackson
+            </p>
+          </div>
           {PortfolioImageBox(openpopupboxGoDo, GoDo4, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo5, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo6, "Godo - TODO App")}
