@@ -54,6 +54,18 @@ const Portfolio = () => {
             Staty2,
             "Staty - Statistics App"
           )}
+          <div className="portfolio-image-box">
+            <p className="portfolio-image">
+              The world is manipulated by bad statistics and studies. We want to
+              arm society by making a statistics learning platform that can be
+              digested by regular everyday people. By remaking goStat in a
+              multiplatform enviornment such as Flutter it finally has the
+              accessability needed for that goal. No need for $100 calculators
+              and convoluted solutions meant for professionals only. -- John
+              Jackson
+            </p>
+          </div>
+
           {PortfolioImageBox(
             openpopupboxStaty,
             Staty3,
