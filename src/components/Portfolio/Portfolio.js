@@ -42,6 +42,7 @@ const Portfolio = () => {
       <div className="container">
         <h1 className="text-uppercase text-center py-5">Portfolio</h1>
         <PopupboxContainer />
+        <h3 className="text-uppercase text-center py-5">Staty</h3>
         <div className="image-box-wrapper row row-cols-auto justify-content-center ">
           {PortfolioImageBox(
             openpopupboxStaty,
@@ -68,12 +69,18 @@ const Portfolio = () => {
             Staty5,
             "Staty - Statistics App"
           )}
+        </div>
+        <h3 className="text-uppercase text-center py-5">Godo</h3>
+        <div className="image-box-wrapper row row-cols-auto justify-content-center ">
           {PortfolioImageBox(openpopupboxGoDo, GoDo1, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo2, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo3, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo4, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo5, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo6, "Godo - TODO App")}
+        </div>
+        <h3 className="text-uppercase text-center py-5">MyNutrition</h3>
+        <div className="image-box-wrapper row row-cols-auto justify-content-center ">
           {PortfolioImageBox(
             openpopupboxMyNutrition,
             MyNutrition1,
@@ -99,6 +106,9 @@ const Portfolio = () => {
             MyNutrition5,
             "MyNutrition - Diet App"
           )}
+        </div>
+        <h3 className="text-uppercase text-center py-5">GoStat</h3>
+        <div className="image-box-wrapper row row-cols-auto justify-content-center ">
           {PortfolioImageBox(
             openpopupboxGoStat,
             GoStat1,
