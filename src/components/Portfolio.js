@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import GoStat1 from "../images/GOSTAT1.png";
 import GoStat2 from "../images/GOSTAT2.png";
@@ -24,12 +25,78 @@ import GoDo3 from "../images/GODO3.png";
 import GoDo4 from "../images/GODO4.png";
 import GoDo5 from "../images/GODO5.png";
 import GoDo6 from "../images/GODO6.png";
+import Staty1 from "../images/STATY1.png";
+import Staty2 from "../images/STATY2.png";
+import Staty3 from "../images/STATY3.png";
+import Staty4 from "../images/STATY4.png";
+import Staty5 from "../images/STATY5.png";
 import { FaSearchPlus } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { PopupboxManager, PopupboxContainer } from "react-popupbox";
 import "react-popupbox/dist/react-popupbox.css";
 
 const Portfolio = () => {
+  const openpopupboxStaty = () => {
+    const content = (
+      <div>
+        <img
+          className="portfolio-image-popupbox"
+          src={Staty1}
+          alt="Staty - Statistics App"
+        />
+        <p>
+          App created in the Flutter.
+          <br />
+          Get this app on IOS and Android!
+        </p>
+        <a
+          href=""
+          className="hyper-link"
+          onClick={() => {
+            window.open(
+              "https://play.google.com/store/apps/details?id=me.johnjackson.staty&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+            );
+          }}
+        >
+          Android
+        </a>
+        <br />
+        <a
+          href=""
+          className="hyper-link"
+          onClick={() => {
+            window.open(
+              "https://apps.apple.com/us/app/staty-statistics-calculator/id1658300476"
+            );
+          }}
+        >
+          Ios
+        </a>
+        <p>See the source code:</p>
+        <a
+          href=""
+          className="hyper-link"
+          onClick={() => {
+            window.open("https://github.com/JohnGJackson0/staty");
+          }}
+        >
+          Github
+        </a>
+      </div>
+    );
+    PopupboxManager.open({
+      content,
+      config: {
+        titleBar: {
+          enable: true,
+          text: "Staty - Statistics App",
+        },
+        fadeIn: true,
+        fadeInSpeed: 500,
+      },
+    });
+  };
+
   const openpopupboxGoDo = () => {
     const content = (
       <div>
@@ -153,6 +220,76 @@ const Portfolio = () => {
         <h1 className="text-uppercase text-center py-5">Portfolio</h1>
         <PopupboxContainer />
         <div className="image-box-wrapper row row-cols-auto justify-content-center ">
+          <div className="portfolio-image-box">
+            <img className="portfolio-image" src={Staty1} />
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxStaty();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
+          </div>
+
+          <div className="portfolio-image-box">
+            <img className="portfolio-image" src={Staty2} />
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxStaty();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
+          </div>
+
+          <div className="portfolio-image-box">
+            <img className="portfolio-image" src={Staty3} />
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxStaty();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
+          </div>
+          <div className="portfolio-image-box">
+            <img className="portfolio-image" src={Staty4} />
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxStaty();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
+          </div>
+
+          <div className="portfolio-image-box">
+            <img className="portfolio-image" src={Staty5} />
+            <div
+              className="overflow"
+              onClick={() => {
+                openpopupboxStaty();
+              }}
+            >
+              <IconContext.Provider value={{ size: "30" }}>
+                <FaSearchPlus className="portfolio-icon" />
+              </IconContext.Provider>
+            </div>
+          </div>
+
+          <br />
           <div className="portfolio-image-box">
             <img className="portfolio-image" src={GoDo1} />
             <div
@@ -580,4 +717,5 @@ const Portfolio = () => {
     </div>
   );
 };
+
 export default Portfolio;
