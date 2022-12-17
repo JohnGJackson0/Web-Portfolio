@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
+import Zoom from "react-reveal/Zoom";
 
 const ContactMe = () => {
   const [successMessage, setSuccessMessage] = useState("");
@@ -46,30 +47,37 @@ const ContactMe = () => {
   return (
     <div id="contact" className="contacts">
       <div className="text-center">
-        <h1>contact me</h1>
-        <p>
-          Please fill out the form or email&nbsp;
-          <a href="mailto: johngjackson0@gmail.com">JohnGJackson0@gmail.com</a>
-          &nbsp;directly.
-        </p>
+        <Zoom>
+          <h1>contact me</h1>
+          <p>
+            Please fill out the form or email&nbsp;
+            <a href="mailto: johngjackson0@gmail.com">
+              JohnGJackson0@gmail.com
+            </a>
+            &nbsp;directly.
+          </p>
+        </Zoom>
         <span className="success-message">{successMessage}</span>
         <div className="container">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="row">
               <div className="col-md-6 col-xs-12">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Name"
-                  {...register("name", {
-                    required: "Please enter your name",
-                    maxLength: {
-                      value: 20,
-                      message: "Please enter a name under 20 characters.",
-                    },
-                  })}
-                />
+                <Zoom>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Name"
+                    {...register("name", {
+                      required: "Please enter your name",
+                      maxLength: {
+                        value: 20,
+                        message: "Please enter a name under 20 characters.",
+                      },
+                    })}
+                  />
+                </Zoom>
                 <div className="line"></div>
+                <Zoom></Zoom>
                 <span className="error-message">
                   {errors.name && (
                     <span>
@@ -78,14 +86,17 @@ const ContactMe = () => {
                     </span>
                   )}
                 </span>
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Phone Number"
-                  {...register("phone", {
-                    required: "Please add your phone number",
-                  })}
-                />
+                <Zoom>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Phone Number"
+                    {...register("phone", {
+                      required: "Please add your phone number",
+                    })}
+                  />
+                </Zoom>
+
                 <div className="line"></div>
                 <span className="error-message">
                   {errors.phone && (
@@ -94,17 +105,20 @@ const ContactMe = () => {
                     </span>
                   )}
                 </span>
-                <input
-                  className="form-control"
-                  placeholder="Email"
-                  {...register("email", {
-                    required: "Please add your email",
-                    pattern: {
-                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: "invalid Email",
-                    },
-                  })}
-                />
+                <Zoom>
+                  <input
+                    className="form-control"
+                    placeholder="Email"
+                    {...register("email", {
+                      required: "Please add your email",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "invalid Email",
+                      },
+                    })}
+                  />
+                </Zoom>
+
                 <div className="line"></div>
                 <span className="error-message">
                   {errors.email && (
@@ -113,14 +127,17 @@ const ContactMe = () => {
                     </span>
                   )}
                 </span>
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Subject"
-                  {...register("subject", {
-                    required: "Please add a subject",
-                  })}
-                />
+                <Zoom>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Subject"
+                    {...register("subject", {
+                      required: "Please add a subject",
+                    })}
+                  />
+                </Zoom>
+
                 <div className="line"></div>
                 <span className="error-message">
                   {errors.subject && (
@@ -131,33 +148,36 @@ const ContactMe = () => {
                 </span>
               </div>
               <div className="col-md-6 col-xs-12">
-                <div className="text-center">
-                  <textarea
-                    type="text"
-                    className="form-control"
-                    placeholder="Please put the subject of your inquiry and I will contact you soon"
-                    {...register("content", {
-                      required: "Please add content.",
-                      minLength: {
-                        value: 10,
-                        message: "Please provide some more detail.",
-                      },
-                    })}
-                  ></textarea>
-                  <div className="line"></div>
-                  <span className="error-message">
-                    {errors.content && (
-                      <span>
-                        <br /> {errors.content.message}
-                        <br />
-                      </span>
-                    )}
-                  </span>
-                </div>
-
-                <button className="btn-main-offer contact-btn" type="submit">
-                  Contact Me
-                </button>
+                <Zoom>
+                  <div className="text-center">
+                    <textarea
+                      type="text"
+                      className="form-control"
+                      placeholder="Please put the subject of your inquiry and I will contact you soon"
+                      {...register("content", {
+                        required: "Please add content.",
+                        minLength: {
+                          value: 10,
+                          message: "Please provide some more detail.",
+                        },
+                      })}
+                    ></textarea>
+                    <div className="line"></div>
+                    <span className="error-message">
+                      {errors.content && (
+                        <span>
+                          <br /> {errors.content.message}
+                          <br />
+                        </span>
+                      )}
+                    </span>
+                  </div>
+                </Zoom>
+                <Zoom>
+                  <button className="btn-main-offer contact-btn" type="submit">
+                    Contact Me
+                  </button>
+                </Zoom>
               </div>
             </div>
           </form>

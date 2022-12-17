@@ -35,6 +35,7 @@ import {
   openpopupboxGoStat,
   openpopupboxMyNutrition,
 } from "./PopupBoxes";
+import { PortfolioQuote } from "./PortfolioQuote";
 
 const Portfolio = () => {
   return (
@@ -54,17 +55,9 @@ const Portfolio = () => {
             Staty2,
             "Staty - Statistics App"
           )}
-          <div className="portfolio-image-box">
-            <p className="portfolio-image">
-              The world is manipulated by bad statistics and studies. We want to
-              arm society by making a statistics learning platform that can be
-              digested by regular everyday people. By remaking goStat in a
-              multiplatform enviornment such as Flutter it finally has the
-              accessability needed for that goal. No need for $100 calculators
-              and convoluted solutions meant for professionals only. -- John
-              Jackson
-            </p>
-          </div>
+          {PortfolioQuote(
+            "The world is manipulated by bad statistics and studies. We want to arm society by making a statistics learning platform that can be digested by regular everyday people. By remaking goStat in a multiplatform enviornment such as Flutter it finally has the accessability needed for that goal. No need for $100 calculators and convoluted solutions meant for professionals only. -- John Jackson"
+          )}
 
           {PortfolioImageBox(
             openpopupboxStaty,
@@ -87,17 +80,10 @@ const Portfolio = () => {
           {PortfolioImageBox(openpopupboxGoDo, GoDo1, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo2, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo3, "Godo - TODO App")}
-          <div className="portfolio-image-box">
-            <p className="portfolio-image">
-              "oh "yuck" another task manager in a portfolio..". Nope, It is a
-              social network for coordinating tasks in a family unit, company or
-              other groups complete with login and task synchronization with
-              multiple accounts. Give me some credit.. micro-architecture, utc,
-              react native multi platform, and more. This has become an example
-              of clean architecture and how it can make UTC amazingly eazy. --
-              John Jackson
-            </p>
-          </div>
+
+          {PortfolioQuote(
+            '"oh "yuck" another task manager in a portfolio..". Nope, It is a social network for coordinating tasks in a family unit, company or other groups complete with login and task synchronization with multiple accounts. Give me some credit.. micro-architecture, utc, react native multi platform, and more. This has become an example of clean architecture and how it can make UTC amazingly eazy. -- John Jackson'
+          )}
           {PortfolioImageBox(openpopupboxGoDo, GoDo4, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo5, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo6, "Godo - TODO App")}
