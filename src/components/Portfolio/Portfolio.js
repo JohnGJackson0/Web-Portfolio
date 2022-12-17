@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState } from "react";
 import GoStat1 from "../../images/GOSTAT1.png";
 import GoStat2 from "../../images/GOSTAT2.png";
 import GoStat3 from "../../images/GOSTAT3.png";
@@ -29,18 +29,37 @@ import Staty5 from "../../images/STATY5.png";
 import { PopupboxContainer } from "react-popupbox";
 import "react-popupbox/dist/react-popupbox.css";
 import { PortfolioImageBox } from "./PortfolioImageBox";
-import {
-  openpopupboxStaty,
-  openpopupboxGoDo,
-  openpopupboxGoStat,
-  openpopupboxMyNutrition,
-} from "./PopupBoxes";
 import { PortfolioQuote } from "./PortfolioQuote";
 import Zoom from "react-reveal/Zoom";
+import { StatyModal } from "./StatyModal";
+import { GodoModal } from "./GodoModal";
+import { MyNutritionModal } from "./MyNutritionModal";
+import { GoStatModal } from "./GoStatModal";
 
 const Portfolio = () => {
+  const [showStaty, setShowStaty] = useState(false);
+  const [showGoDo, setShowGoDo] = useState(false);
+  const [showMyNutrition, setShowMyNutrition] = useState(false);
+  const [showGoStat, setShowGoStat] = useState(false);
+
   return (
-    <div id="portfolio" className="portfolio-wrapper">
+    <div id="portfolio" className="portfolio-wrapper mainBackground">
+      {showStaty &&
+        StatyModal(showStaty, () => {
+          setShowStaty(false);
+        })}
+      {showGoDo &&
+        GodoModal(showGoDo, () => {
+          setShowGoDo(false);
+        })}
+      {showMyNutrition &&
+        MyNutritionModal(showMyNutrition, () => {
+          setShowMyNutrition(false);
+        })}
+      {showGoStat &&
+        GoStatModal(showGoStat, () => {
+          setShowGoStat(false);
+        })}
       <div className="container">
         <Zoom>
           <h1 className="text-uppercase text-center py-5">Portfolio</h1>
@@ -53,12 +72,12 @@ const Portfolio = () => {
 
         <div className="image-box-wrapper row row-cols-auto justify-content-center ">
           {PortfolioImageBox(
-            openpopupboxStaty,
+            () => setShowStaty(true),
             Staty1,
             "Staty - Statistics App"
           )}
           {PortfolioImageBox(
-            openpopupboxStaty,
+            () => setShowStaty(true),
             Staty2,
             "Staty - Statistics App"
           )}
@@ -67,17 +86,17 @@ const Portfolio = () => {
           )}
 
           {PortfolioImageBox(
-            openpopupboxStaty,
+            () => setShowStaty(true),
             Staty3,
             "Staty - Statistics App"
           )}
           {PortfolioImageBox(
-            openpopupboxStaty,
+            () => setShowStaty(true),
             Staty4,
             "Staty - Statistics App"
           )}
           {PortfolioImageBox(
-            openpopupboxStaty,
+            () => setShowStaty(true),
             Staty5,
             "Staty - Statistics App"
           )}
@@ -87,16 +106,16 @@ const Portfolio = () => {
         </Zoom>
 
         <div className="image-box-wrapper row row-cols-auto justify-content-center ">
-          {PortfolioImageBox(openpopupboxGoDo, GoDo1, "Godo - TODO App")}
-          {PortfolioImageBox(openpopupboxGoDo, GoDo2, "Godo - TODO App")}
-          {PortfolioImageBox(openpopupboxGoDo, GoDo3, "Godo - TODO App")}
+          {PortfolioImageBox(() => setShowGoDo(true), GoDo1, "Godo - TODO App")}
+          {PortfolioImageBox(() => setShowGoDo(true), GoDo2, "Godo - TODO App")}
+          {PortfolioImageBox(() => setShowGoDo(true), GoDo3, "Godo - TODO App")}
 
           {PortfolioQuote(
             '"oh "yuck" another task manager in a portfolio..". Nope, It is a social network for coordinating tasks in a family unit, company or other groups complete with login and task synchronization with multiple accounts. Give me some credit.. micro-architecture, utc, react native multi platform, and more. This has become an example of clean architecture and how it can make UTC amazingly eazy. -- John Jackson'
           )}
-          {PortfolioImageBox(openpopupboxGoDo, GoDo4, "Godo - TODO App")}
-          {PortfolioImageBox(openpopupboxGoDo, GoDo5, "Godo - TODO App")}
-          {PortfolioImageBox(openpopupboxGoDo, GoDo6, "Godo - TODO App")}
+          {PortfolioImageBox(() => setShowGoDo(true), GoDo4, "Godo - TODO App")}
+          {PortfolioImageBox(() => setShowGoDo(true), GoDo5, "Godo - TODO App")}
+          {PortfolioImageBox(() => setShowGoDo(true), GoDo6, "Godo - TODO App")}
         </div>
         <Zoom>
           <h3 className="text-uppercase text-center py-5">My Nutrition</h3>
@@ -104,27 +123,27 @@ const Portfolio = () => {
 
         <div className="image-box-wrapper row row-cols-auto justify-content-center ">
           {PortfolioImageBox(
-            openpopupboxMyNutrition,
+            () => setShowMyNutrition(true),
             MyNutrition1,
             "MyNutrition - Diet App"
           )}
           {PortfolioImageBox(
-            openpopupboxMyNutrition,
+            () => setShowMyNutrition(true),
             MyNutrition2,
             "MyNutrition - Diet App"
           )}
           {PortfolioImageBox(
-            openpopupboxMyNutrition,
+            () => setShowMyNutrition(true),
             MyNutrition3,
             "MyNutrition - Diet App"
           )}
           {PortfolioImageBox(
-            openpopupboxMyNutrition,
+            () => setShowMyNutrition(true),
             MyNutrition4,
             "MyNutrition - Diet App"
           )}
           {PortfolioImageBox(
-            openpopupboxMyNutrition,
+            () => setShowMyNutrition(true),
             MyNutrition5,
             "MyNutrition - Diet App"
           )}
@@ -135,52 +154,52 @@ const Portfolio = () => {
 
         <div className="image-box-wrapper row row-cols-auto justify-content-center ">
           {PortfolioImageBox(
-            openpopupboxGoStat,
+            () => setShowGoStat(true),
             GoStat1,
             "GoStat - Statistics App"
           )}
           {PortfolioImageBox(
-            openpopupboxGoStat,
+            () => setShowGoStat(true),
             GoStat2,
             "GoStat - Statistics App"
           )}
           {PortfolioImageBox(
-            openpopupboxGoStat,
+            () => setShowGoStat(true),
             GoStat3,
             "GoStat - Statistics App"
           )}
           {PortfolioImageBox(
-            openpopupboxGoStat,
+            () => setShowGoStat(true),
             GoStat4,
             "GoStat - Statistics App"
           )}
           {PortfolioImageBox(
-            openpopupboxGoStat,
+            () => setShowGoStat(true),
             GoStat5,
             "GoStat - Statistics App"
           )}
           {PortfolioImageBox(
-            openpopupboxGoStat,
+            () => setShowGoStat(true),
             GoStat6,
             "GoStat - Statistics App"
           )}
           {PortfolioImageBox(
-            openpopupboxGoStat,
+            () => setShowGoStat(true),
             GoStat7,
             "GoStat - Statistics App"
           )}
           {PortfolioImageBox(
-            openpopupboxGoStat,
+            () => setShowGoStat(true),
             GoStat8,
             "GoStat - Statistics App"
           )}
           {PortfolioImageBox(
-            openpopupboxGoStat,
+            () => setShowGoStat(true),
             GoStat9,
             "GoStat - Statistics App"
           )}
           {PortfolioImageBox(
-            openpopupboxGoStat,
+            () => setShowGoStat(true),
             GoStat10,
             "GoStat - Statistics App"
           )}
