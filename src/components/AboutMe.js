@@ -6,19 +6,22 @@ const AboutMe = () => {
   return (
     <div id="about" className="container py-5">
       <div className="row">
-        <Zoom>
-          <div className="col-lg-6 col-xm-12">
+        <div className="col-lg-6 col-xm-12">
+          <Zoom>
             <div className="photo-wrap mb-3">
               <img className="profile-img" src={author} alt="author" />
             </div>
             <div className="photo-label">
               <h3>John Jackson, BSc</h3>
             </div>
-          </div>
-        </Zoom>
+          </Zoom>
+        </div>
         <Zoom>
           <div className="col-lg-6 col-xm-12">
-            <h1 className="about-heading">About me</h1>
+            <Zoom>
+              <h1 className="about-heading">About me</h1>
+            </Zoom>
+
             <p>
               John Jackson is an IT professional and college graduate with 2+
               years of experience in developing hybrid mobile (React Native),

@@ -36,14 +36,21 @@ import {
   openpopupboxMyNutrition,
 } from "./PopupBoxes";
 import { PortfolioQuote } from "./PortfolioQuote";
+import Zoom from "react-reveal/Zoom";
 
 const Portfolio = () => {
   return (
     <div id="portfolio" className="portfolio-wrapper">
       <div className="container">
-        <h1 className="text-uppercase text-center py-5">Portfolio</h1>
+        <Zoom>
+          <h1 className="text-uppercase text-center py-5">Portfolio</h1>
+        </Zoom>
+
         <PopupboxContainer />
-        <h3 className="text-uppercase text-center py-5">Staty</h3>
+        <Zoom>
+          <h3 className="text-uppercase text-center py-5">Staty</h3>
+        </Zoom>
+
         <div className="image-box-wrapper row row-cols-auto justify-content-center ">
           {PortfolioImageBox(
             openpopupboxStaty,
@@ -75,7 +82,10 @@ const Portfolio = () => {
             "Staty - Statistics App"
           )}
         </div>
-        <h3 className="text-uppercase text-center py-5">Godo</h3>
+        <Zoom>
+          <h3 className="text-uppercase text-center py-5">Godo</h3>
+        </Zoom>
+
         <div className="image-box-wrapper row row-cols-auto justify-content-center ">
           {PortfolioImageBox(openpopupboxGoDo, GoDo1, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo2, "Godo - TODO App")}
@@ -88,7 +98,10 @@ const Portfolio = () => {
           {PortfolioImageBox(openpopupboxGoDo, GoDo5, "Godo - TODO App")}
           {PortfolioImageBox(openpopupboxGoDo, GoDo6, "Godo - TODO App")}
         </div>
-        <h3 className="text-uppercase text-center py-5">MyNutrition</h3>
+        <Zoom>
+          <h3 className="text-uppercase text-center py-5">My Nutrition</h3>
+        </Zoom>
+
         <div className="image-box-wrapper row row-cols-auto justify-content-center ">
           {PortfolioImageBox(
             openpopupboxMyNutrition,
@@ -116,7 +129,10 @@ const Portfolio = () => {
             "MyNutrition - Diet App"
           )}
         </div>
-        <h3 className="text-uppercase text-center py-5">GoStat</h3>
+        <Zoom>
+          <h3 className="text-uppercase text-center py-5">GoStat</h3>
+        </Zoom>
+
         <div className="image-box-wrapper row row-cols-auto justify-content-center ">
           {PortfolioImageBox(
             openpopupboxGoStat,
