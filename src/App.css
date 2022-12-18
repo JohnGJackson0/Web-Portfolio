@@ -20,6 +20,11 @@ body {
   font-family: "Roboto Condensed", sans-serif !important;
 }
 
+.wrap {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
 /************ NAVBAR ************/
 
 nav {
@@ -330,6 +335,18 @@ p {
 }
 
 /************ PORTFOLIO ************/
+
+.portfolio-btn {
+  border: 1px solid var(--primary-red);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--primary-light-grey);
+  margin: .5rem;
+  background: none;
+}
+
 
 .portfolio-wrapper {
   padding: 3rem 0;
