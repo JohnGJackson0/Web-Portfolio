@@ -214,6 +214,7 @@ const Portfolio = () => {
         <div className="wrap">
           {portfolioContent === PortfolioStatus.NONE && (<>
             <h1>Select a project above to view</h1>
+            <div style={{margin: 20, height: '50vh'}}></div>
           </>)}
         </div>
 
