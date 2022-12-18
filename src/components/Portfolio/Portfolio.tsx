@@ -1,5 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
+import AUTO1 from "../../images/AUTO1.png"
+import AUTO2 from "../../images/AUTO2.png"
+import AUTO3 from "../../images/AUTO3.png"
+import AUTO4 from "../../images/AUTO4.png"
+import AUTO5 from "../../images/AUTO5.png"
+import AUTO6 from "../../images/AUTO6.png"
 import GoStat1 from "../../images/GOSTAT1.png";
 import GoStat2 from "../../images/GOSTAT2.png";
 import GoStat3 from "../../images/GOSTAT3.png";
@@ -48,13 +54,15 @@ import { MyNutritionModal } from "./MyNutritionModal";
 // @ts-ignore
 import { GoStatModal } from "./GoStatModal";
 import { QuickNotesModal } from "./QuickNotesModal";
+import { IMSAutoModal } from "./IMSAutoModal";
 
 enum PortfolioStatus {
   STATY = "staty",
   GODO = "GoDo",
   GOSTAT = "goStat",
   MYNUTRITION = "myNutrition",
-  QUICKNOTES= "quickNotes"
+  QUICKNOTES= "quickNotes",
+  IMSAUTO="imsAuto"
 }
 
 const Portfolio = () => {
@@ -63,6 +71,7 @@ const Portfolio = () => {
   const [showMyNutrition, setShowMyNutrition] = useState(false);
   const [showGoStat, setShowGoStat] = useState(false);
   const [showQuickNotes, setShowQuickNotes] = useState(false);
+  const [showIMSAuto, setShowIMSAuto] = useState(false);
 
   const [portfolioContent, setPortfolioContent] = useState(PortfolioStatus.STATY);
 
@@ -72,6 +81,10 @@ const Portfolio = () => {
         StatyModal(showStaty, () => {
           setShowStaty(false);
         })}
+      {showIMSAuto && 
+      IMSAutoModal(showIMSAuto, () => {
+        setShowIMSAuto(false);
+      })}
       {showGoDo &&
         GodoModal(showGoDo, () => {
           setShowGoDo(false);
@@ -115,9 +128,61 @@ const Portfolio = () => {
               <button className="portfolio-btn" onClick={()=>{
                 setPortfolioContent(PortfolioStatus.GOSTAT)
               }}>GoStat</button>
+              <button className="portfolio-btn" onClick={()=>{
+                setPortfolioContent(PortfolioStatus.IMSAUTO)
+              }}>Auto Parts CMS</button>
             </div>
           </div>
         </Zoom>
+        {portfolioContent === PortfolioStatus.IMSAUTO && 
+          (
+            <>
+              <Zoom>
+                <h3 className="text-uppercase text-center py-5">IMS Auto Parts</h3>
+              </Zoom>
+
+              <div className="image-box-wrapper row row-cols-auto justify-content-center">
+                {PortfolioImageBox(
+                  () => setShowIMSAuto(true),
+                  AUTO1,
+                  "IMS Auto Store App"
+                )}
+                {PortfolioImageBox(
+                  () => setShowIMSAuto(true),
+                  AUTO2,
+                  "IMS Auto Store App"
+                )}
+
+                {PortfolioQuote(
+                  "I learned that evolutionary prototypes are too much work for many scenerios. However they come in handy when developers find themselves unable to predict impediements like with library integrations. Always recommend at least a quick wireframe at the start of a development cycle. -- John Jackson"
+                )}
+
+                {PortfolioImageBox(
+                  () => setShowIMSAuto(true),
+                  AUTO3,
+                  "IMS Auto Store App"
+                )}
+                {PortfolioImageBox(
+                  () => setShowIMSAuto(true),
+                  AUTO4,
+                  "IMS Auto Store App"
+                )}
+                {PortfolioImageBox(
+                  () => setShowIMSAuto(true),
+                  AUTO5,
+                  "IMS Auto Store App"
+                )}
+                {PortfolioImageBox(
+                  () => setShowIMSAuto(true),
+                  AUTO6,
+                  "IMS Auto Store App"
+                )}
+              </div>
+            </>
+
+          )}
+
+
           {portfolioContent === PortfolioStatus.QUICKNOTES && 
           (
             <>
@@ -265,6 +330,9 @@ const Portfolio = () => {
             () => setShowGoStat(true),
             GoStat2,
             "GoStat - Statistics App"
+          )}
+          {PortfolioQuote(
+              "I guess I just love statistics. However, I also love quality. I built this app so quickly it became extremely hard to maintain and update it to Kotlin. At the time I also felt the need for it to be multi-platform, so I remade it in Flutter instead!  -- John Jackson"
           )}
           {PortfolioImageBox(
             () => setShowGoStat(true),
