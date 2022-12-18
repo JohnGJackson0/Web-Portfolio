@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
+import REPO1 from "../../images/REPO1.png"
 import AUTO1 from "../../images/AUTO1.png"
 import AUTO2 from "../../images/AUTO2.png"
 import AUTO3 from "../../images/AUTO3.png"
@@ -37,6 +38,7 @@ import QuickNotes2 from "../../images/QUICKNOTES1.png";
 import QuickNotes3 from "../../images/QUICKNOTES1.png";
 import QuickNotes4 from "../../images/QUICKNOTES1.png";
 import QuickNotes5 from "../../images/QUICKNOTES1.png";
+import { FaAngleDoubleRight } from "react-icons/fa";
 // @ts-ignore
 import "react-popupbox/dist/react-popupbox.css";
 // @ts-ignore
@@ -55,6 +57,9 @@ import { MyNutritionModal } from "./MyNutritionModal";
 import { GoStatModal } from "./GoStatModal";
 import { QuickNotesModal } from "./QuickNotesModal";
 import { IMSAutoModal } from "./IMSAutoModal";
+import { S3BucketModal } from "./S3BucketModal";
+import { RestfulModal } from "./RestfulModal";
+import { MernModal } from "./MernModal";
 
 enum PortfolioStatus {
   STATY = "staty",
@@ -62,21 +67,39 @@ enum PortfolioStatus {
   GOSTAT = "goStat",
   MYNUTRITION = "myNutrition",
   QUICKNOTES= "quickNotes",
-  IMSAUTO="imsAuto"
+  IMSAUTO="imsAuto",
+  SERVERLESS="serverless",
+  MERN="mern",
+  NONE="none"
+}
+
+enum PlatformNavigation {
+  FLUTTER ="flutter",
+  REACTNATIVE ="react native",
+  ANDROID = 'android',
+  BACKEND = 'backend'
 }
 
 const Portfolio = () => {
+  const [platformContent, setPlatformContent] = useState(PlatformNavigation.FLUTTER)
+  const [portfolioContent, setPortfolioContent] = useState(PortfolioStatus.STATY);
+
+  // for modals
   const [showStaty, setShowStaty] = useState(false);
   const [showGoDo, setShowGoDo] = useState(false);
   const [showMyNutrition, setShowMyNutrition] = useState(false);
   const [showGoStat, setShowGoStat] = useState(false);
   const [showQuickNotes, setShowQuickNotes] = useState(false);
   const [showIMSAuto, setShowIMSAuto] = useState(false);
-
-  const [portfolioContent, setPortfolioContent] = useState(PortfolioStatus.STATY);
+  const [showThumbnailService, setShowThumbnailService] = useState(false);
+  const [showRestfulService, setShowRestfulService] = useState(false);
+  const [showMern, setShowMern] = useState(false);
 
   return (
     <div id="portfolio" className="portfolio-wrapper mainBackground">
+      {showMern && MernModal(showMern, () => setShowMern(false))}
+      {showRestfulService && RestfulModal(showRestfulService, () => setShowRestfulService(false))}
+      {showThumbnailService && S3BucketModal(showThumbnailService, () => {setShowThumbnailService(false)})}
       {showStaty &&
         StatyModal(showStaty, () => {
           setShowStaty(false);
@@ -110,30 +133,124 @@ const Portfolio = () => {
         <Zoom>
           <div className="row">
             <div className="wrap">
-              <p>Flutter:&nbsp;</p>
-              <button className="portfolio-btn" onClick={()=>{
+              <button className="portfolio-btn" style={{
+                backgroundColor: platformContent === PlatformNavigation.FLUTTER ? '#f9ab00' : 'transparent'
+              }} onClick={()=>{
+                // only one project, lets select automatically
                 setPortfolioContent(PortfolioStatus.STATY)
-              }}>Staty</button>
-              <p>&nbsp;React Native:&nbsp;</p>
-              <button className="portfolio-btn" onClick={()=>{
-                setPortfolioContent(PortfolioStatus.GODO)
-              }}>GoDo</button>
-              <button className="portfolio-btn" onClick={()=>{
-                setPortfolioContent(PortfolioStatus.QUICKNOTES)
-              }}>Quick Notes</button>
-              <button className="portfolio-btn" onClick={()=>{
-                setPortfolioContent(PortfolioStatus.MYNUTRITION)
-              }}>My Nutrition</button>
-              <p>&nbsp;Android:&nbsp;</p>
-              <button className="portfolio-btn" onClick={()=>{
-                setPortfolioContent(PortfolioStatus.GOSTAT)
-              }}>GoStat</button>
-              <button className="portfolio-btn" onClick={()=>{
-                setPortfolioContent(PortfolioStatus.IMSAUTO)
-              }}>Auto Parts CMS</button>
+                setPlatformContent(PlatformNavigation.FLUTTER);
+              }}>Flutter</button>
+              <button className="portfolio-btn" style={{
+                backgroundColor: platformContent === PlatformNavigation.REACTNATIVE ? '#f9ab00' : 'transparent'
+              }} onClick={()=>{
+                setPortfolioContent(PortfolioStatus.NONE);
+                setPlatformContent(PlatformNavigation.REACTNATIVE);
+              }}>React Native</button>
+              <button className="portfolio-btn" style={{
+                backgroundColor: platformContent === PlatformNavigation.ANDROID ? '#f9ab00' : 'transparent'
+              }} onClick={()=>{
+                setPortfolioContent(PortfolioStatus.NONE);
+                setPlatformContent(PlatformNavigation.ANDROID);
+              }}>Android</button>
+              {<button className="portfolio-btn" style={{
+                backgroundColor: platformContent === PlatformNavigation.BACKEND ? '#f9ab00' : 'transparent'
+              }} onClick={()=>{
+                setPortfolioContent(PortfolioStatus.NONE);
+                setPlatformContent(PlatformNavigation.BACKEND);
+              }}>Backend</button>}
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="wrap">
+            Select a Project
+            <FaAngleDoubleRight /> 
+            {platformContent === PlatformNavigation.FLUTTER && <button className="portfolio-btn"  style={{
+                backgroundColor: portfolioContent === PortfolioStatus.STATY ? '#f9ab00' : 'transparent'
+              }} onClick={()=>{
+                setPortfolioContent(PortfolioStatus.STATY)
+              }}>Staty</button>}
+
+          {platformContent === PlatformNavigation.REACTNATIVE && <button className="portfolio-btn" style={{
+                backgroundColor: portfolioContent === PortfolioStatus.GODO ? '#f9ab00' : 'transparent'
+              }} onClick={()=>{
+            setPortfolioContent(PortfolioStatus.GODO)
+          }}>GoDo</button>}
+          {platformContent === PlatformNavigation.REACTNATIVE && <button className="portfolio-btn" style={{
+                backgroundColor: portfolioContent === PortfolioStatus.QUICKNOTES ? '#f9ab00' : 'transparent'
+              }} onClick={()=>{
+            setPortfolioContent(PortfolioStatus.QUICKNOTES)
+          }}>Quick Notes</button>}
+          {platformContent === PlatformNavigation.REACTNATIVE && <button className="portfolio-btn" style={{
+                backgroundColor: portfolioContent === PortfolioStatus.MYNUTRITION ? '#f9ab00' : 'transparent'
+              }}  onClick={()=>{
+            setPortfolioContent(PortfolioStatus.MYNUTRITION)
+          }}>My Nutrition</button>}
+
+          {platformContent === PlatformNavigation.ANDROID && <button className="portfolio-btn" style={{
+                backgroundColor: portfolioContent === PortfolioStatus.GOSTAT ? '#f9ab00' : 'transparent'
+              }} onClick={()=>{
+            setPortfolioContent(PortfolioStatus.GOSTAT)
+          }}>GoStat</button>}
+          {platformContent === PlatformNavigation.ANDROID && <button className="portfolio-btn" style={{
+                backgroundColor: portfolioContent === PortfolioStatus.IMSAUTO ? '#f9ab00' : 'transparent'
+              }}  onClick={()=>{
+            setPortfolioContent(PortfolioStatus.IMSAUTO)
+          }}>Auto Parts CMS</button>}
+
+          {platformContent === PlatformNavigation.BACKEND && <button className="portfolio-btn" style={{
+                backgroundColor: portfolioContent === PortfolioStatus.SERVERLESS ? '#f9ab00' : 'transparent'
+              }} onClick={()=>{
+              setPortfolioContent(PortfolioStatus.SERVERLESS)
+            }}>Microservices</button>}
+            {platformContent === PlatformNavigation.BACKEND && <button className="portfolio-btn" style={{
+                backgroundColor: portfolioContent === PortfolioStatus.MERN ? '#f9ab00' : 'transparent'
+              }}  onClick={()=>{
+              setPortfolioContent(PortfolioStatus.MERN)
+            }}>Mern</button>}
             </div>
           </div>
         </Zoom>
+        <div className="wrap">
+          {portfolioContent === PortfolioStatus.NONE && (<>
+            <h1>Select a project above to view</h1>
+          </>)}
+        </div>
+
+        {portfolioContent === PortfolioStatus.MERN && (<>
+          <h3 className="text-uppercase text-center py-5">Mern</h3>
+          <div className="image-box-wrapper row row-cols-auto justify-content-center">
+            {PortfolioImageBox(
+              () => setShowMern(true),
+              REPO1,
+              "Mern Stack", 
+              "Mern Stack"
+            )}
+          </div>
+        </>)}
+        {portfolioContent === PortfolioStatus.SERVERLESS &&
+        (
+          <>
+            <Zoom>
+              <h3 className="text-uppercase text-center py-5">Serverless</h3>
+            </Zoom>
+            <div className="image-box-wrapper row row-cols-auto justify-content-center">
+              {PortfolioImageBox(
+                () => setShowThumbnailService(true),
+                REPO1,
+                "Serverless", 
+                "S3 Thumbnail Bucket Upload"
+              )}
+              {PortfolioImageBox(
+                () => setShowRestfulService(true),
+                REPO1,
+                "Serverless", 
+                "Restful API in nodeJS"
+              )}
+            </div>
+
+          </>
+        )}
         {portfolioContent === PortfolioStatus.IMSAUTO && 
           (
             <>

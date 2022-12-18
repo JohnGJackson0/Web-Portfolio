@@ -22,7 +22,7 @@ body {
 
 .wrap {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
 }
 /************ NAVBAR ************/
@@ -362,7 +362,6 @@ h3 {
 
 .portfolio-image {
   width: 15rem;
-  border: 0.06rem solid var(--primary-orange);
   padding: 0.5rem;
 }
 
@@ -370,16 +369,23 @@ h3 {
   position: relative;
   margin: 5px;
   z-index: 1;
+  border: 0.06rem solid var(--primary-orange);
+  }
+  
+  .portfolio-label {
+    align-self: center;
+    justify-self: center;
 }
 
 .overflow {
   position: absolute;
   opacity: 0;
   background: var(--primary-black);
-  width: 15rem;
-  height: 100%;
   top: 0;
-  border: 0.06rem solid var(--primary-red);
+  left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
   cursor: pointer;
 }
 
