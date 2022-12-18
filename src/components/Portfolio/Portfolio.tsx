@@ -26,6 +26,11 @@ import Staty2 from "../../images/STATY2.png";
 import Staty3 from "../../images/STATY3.png";
 import Staty4 from "../../images/STATY4.png";
 import Staty5 from "../../images/STATY5.png";
+import QuickNotes1 from "../../images/QUICKNOTES1.png";
+import QuickNotes2 from "../../images/QUICKNOTES1.png";
+import QuickNotes3 from "../../images/QUICKNOTES1.png";
+import QuickNotes4 from "../../images/QUICKNOTES1.png";
+import QuickNotes5 from "../../images/QUICKNOTES1.png";
 // @ts-ignore
 import "react-popupbox/dist/react-popupbox.css";
 // @ts-ignore
@@ -42,12 +47,14 @@ import { GodoModal } from "./GodoModal";
 import { MyNutritionModal } from "./MyNutritionModal";
 // @ts-ignore
 import { GoStatModal } from "./GoStatModal";
+import { QuickNotesModal } from "./QuickNotesModal";
 
 enum PortfolioStatus {
   STATY = "staty",
   GODO = "GoDo",
   GOSTAT = "goStat",
-  MYNUTRITION = "myNutrition"
+  MYNUTRITION = "myNutrition",
+  QUICKNOTES= "quickNotes"
 }
 
 const Portfolio = () => {
@@ -55,6 +62,7 @@ const Portfolio = () => {
   const [showGoDo, setShowGoDo] = useState(false);
   const [showMyNutrition, setShowMyNutrition] = useState(false);
   const [showGoStat, setShowGoStat] = useState(false);
+  const [showQuickNotes, setShowQuickNotes] = useState(false);
 
   const [portfolioContent, setPortfolioContent] = useState(PortfolioStatus.STATY);
 
@@ -76,6 +84,11 @@ const Portfolio = () => {
         GoStatModal(showGoStat, () => {
           setShowGoStat(false);
         })}
+      {showQuickNotes && 
+        QuickNotesModal(showQuickNotes, () => {
+          setShowQuickNotes(false);
+        })
+      }
       <div className="container">
         <Zoom>
           <h1 className="text-uppercase text-center py-5">Portfolio</h1>
@@ -93,6 +106,9 @@ const Portfolio = () => {
                 setPortfolioContent(PortfolioStatus.GODO)
               }}>GoDo</button>
               <button className="portfolio-btn" onClick={()=>{
+                setPortfolioContent(PortfolioStatus.QUICKNOTES)
+              }}>Quick Notes</button>
+              <button className="portfolio-btn" onClick={()=>{
                 setPortfolioContent(PortfolioStatus.MYNUTRITION)
               }}>My Nutrition</button>
               <p>&nbsp;Android:&nbsp;</p>
@@ -102,6 +118,44 @@ const Portfolio = () => {
             </div>
           </div>
         </Zoom>
+          {portfolioContent === PortfolioStatus.QUICKNOTES && 
+          (
+            <>
+              <Zoom>
+                <h3 className="text-uppercase text-center py-5">Quick notes</h3>
+              </Zoom>
+
+              <div className="image-box-wrapper row row-cols-auto justify-content-center">
+                {PortfolioImageBox(
+                  () => setShowQuickNotes(true),
+                  QuickNotes1,
+                  "Quick Notes App"
+                )}
+                {PortfolioImageBox(
+                  () => setShowQuickNotes(true),
+                  QuickNotes2,
+                  "Quick Notes App"
+                )}
+
+                {PortfolioImageBox(
+                  () => setShowQuickNotes(true),
+                  QuickNotes3,
+                  "Quick Notes App"
+                )}
+                {PortfolioImageBox(
+                  () => setShowQuickNotes(true),
+                  QuickNotes4,
+                  "Quick Notes App"
+                )}
+                {PortfolioImageBox(
+                  () => setShowQuickNotes(true),
+                  QuickNotes5,
+                  "Quick Notes App"
+                )}
+              </div>
+            </>
+
+          )}
           {portfolioContent === PortfolioStatus.STATY && 
           (
             <>
