@@ -42,7 +42,7 @@ const Experience = () => {
               <p>
                 Graduate with a Bachelors Degree In Computer Science and a
                 concentration in Computer Programming from Baker College.
-                Recieved honors; <i>magna cum laude.</i>
+                Received honors; <i>magna cum laude.</i>
               </p>
             </div>
           </Zoom>
@@ -115,7 +115,7 @@ const Experience = () => {
             <div className="timeline-content">
               <h3>January 2022 - Present</h3>
               <p>
-                Working for Nexient, LLC full time on levi strauss's React
+                Working for Nexient, LLC full time on Levi Strauss's React
                 Native mobile application
                 <br />
                 <br />
