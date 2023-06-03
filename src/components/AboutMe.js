@@ -7,34 +7,37 @@ const AboutMe = () => {
       <div className="container py-5">
         <div className="row">
           <Zoom>
-            <div className="col-lg-12 col-xm-12">
+            <div className="col-lg-10 col-xm-10 mx-auto">
               <Zoom>
                 <h1 className="about-heading">About me</h1>
               </Zoom>
-              <p>
-                Result-driven, Mobile Applications & Software Developer with
-                proven robust experience developing hybrid mobile (React Native
-                & Flutter), native mobile (Android), web, and business
-                applications.
-                <br />
-                • Exemplary track record of authoring and publishing several
-                live mobile production applications in Google Play and Apple
-                stores.
-                <br />
-                • Proven technical expertise in technologies such as JavaScript,
-                Typescript, React Native, MERN, Node, MicroServices, Java, and
-                others.
-                <br />
-                • Verifiable in-depth understanding of computer science,
-                algorithms, complex data structures, and clean architecture.
-                <br />
-                • Highly knowledgeable of agile methodology and principles,
-                including best practices for the full software development life
-                cycle. <br />
-                • Adaptable, quick learner with a superior ability to diagnose &
-                resolve critical issues in a dynamic, outcome-driven technical
-                environment.
-                <br />
+              <p className="about-paragraph">Welcome!</p>
+              <p className="about-paragraph">
+                I am a proficient Mobile Applications and Software Developer
+                with a passion for creating efficient, innovative solutions.
+                With a strong background in both hybrid (React Native & Flutter)
+                and native mobile (Android) development, I also excel in web and
+                business application development.
+              </p>
+              <p className="about-paragraph">
+                Over the years, I have authored and published several mobile
+                production applications, demonstrating my technical abilities
+                across multiple technologies. I possess a deep understanding of
+                computer science principles, from algorithms and complex data
+                structures to clean architecture.
+              </p>
+              <p className="about-paragraph">
+                My agile approach to the software development lifecycle, along
+                with my adaptive learning attitude, allows me to thrive in
+                outcome-driven technical environments. I have a knack for
+                diagnosing and resolving critical issues, ensuring seamless
+                digital experiences.
+              </p>
+              <p className="about-paragraph">
+                Whether you're a business looking to improve processes, or need
+                assistance with a new mobile app, I'm here to elevate your
+                projects and help achieve your objectives. Ready to get started?
+                Let's connect!
               </p>
             </div>
           </Zoom>

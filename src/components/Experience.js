@@ -22,14 +22,24 @@ const Experience = () => {
           <div className="marker"></div>
           <Zoom>
             <div className="timeline-content">
-              <h3>November 2018 - June 7 2021</h3>
+              <h3>November 2018 - Jan 2021</h3>
               <p>
-                Creates apps in the native Android SDK.
-                <br />
-                • Proven technical expertise in technologies such as Android
-                (Java), ORM, MVX MVC architectural patterns, observers, DIAP,
-                and other solid principles.
-                <br />
+                • Demonstrated proficiency in Android development with Java,
+                ORM, and advanced architectures like MVX and MVC. Utilized
+                observers, DIAP, and SOLID principles to develop robust and
+                high-performance mobile applications.
+                <br />• Tackled complex programming challenges effectively,
+                implemented innovative solutions that enhanced user experiences
+                and improved business results. These solutions also set the
+                groundwork for future development. <br />
+                •Mastered Android SDK and adopted advanced performance tuning
+                and debugging techniques. This expertise contributed to a
+                seamless development process and high-quality, stable
+                applications. <br />• Committed to continuous learning, staying
+                updated with the latest Android development trends. This
+                commitment contributed to skill enhancement and the discovery of
+                innovative ways to improve mobile application quality and
+                functionality.
               </p>
             </div>
           </Zoom>
@@ -40,9 +50,9 @@ const Experience = () => {
             <div className="timeline-content">
               <h3>Decemeber 2021</h3>
               <p>
-                Graduate with a Bachelors Degree In Computer Science and a
-                concentration in Computer Programming from Baker College.
-                Received honors; <i>magna cum laude.</i>
+                Obtained a Bachelor's Degree in Computer Science with a focus on
+                Computer Programming from Baker College. Graduated with high
+                distinction, earning Magna Cum Laude honors.
               </p>
             </div>
           </Zoom>
@@ -114,42 +124,40 @@ const Experience = () => {
           <Zoom>
             <div className="timeline-content">
               <h3>January 2022 - Present</h3>
+              <h3>April 2021 - January 2022</h3>
               <p>
-                Working for Nexient, LLC full time on Levi Strauss's React
-                Native mobile application
-                <br />
-                <br />
-                • Play a vital role in the front-end development of a large
-                enterprise mobile application, Levi’s Mobile App, expertly
-                utilizing JavaScript, Typescript, React Native and Node in both
-                functional components and legacy class-based components.
-                <br />
-                • Lead the project to the first Unit and Functional tests by
-                constructing the initial infrastructure of UTC using Jest and
-                the Testing-Library, performing refactors and writing
-                architectural documentation to extend testing and expedite
-                recognition, integration, and extension of highly cohesive,
-                decoupled clean architecture.
-                <br />
-                • Lead a track to 40% higher completion rate when taking over as
-                a track lead. Focusing on discovery & refinement in a complete
-                software development lifecycle SDLC maintaining an agile,
-                collaborative culture, and fast-paced, high-pressure team
-                environment.
-                <br />
-                • Exceptional at story pointing, managing architectural risks
-                and anticipating impediments from teams, conflicts in
-                dependencies and acceptance criteria in Scrum and Kanban.
-                Writing code that is most possible for future requirement
-                changes by employing YAGNI, abstractions and several
-                architectural patterns like Dependency Injection DIAP,
-                inversion, and SOLID.
-                <br />
-                • Worked extensively on React Native Bridge code in internal
-                libraries of application dealing with video player issues, and
-                wrote several features and fixed several bugs that increased
-                CSAT scores on my track.
-                <br />
+                I primarily spearheaded initiatives for one of the most
+                substantial React Native applications globally, making an impact
+                in 18 countries across 3 continents through the Levi Strauss &
+                Co mobile application as a track lead of 4 developers.
+              </p>
+              <p>
+                Key initiatives*: <br />• Pioneering the integration of Jest and
+                Testing Library for the first time in the application. Following
+                this, I conceived and established the app's inaugural domain
+                infrastructure layer, drawing inspiration from Clean and Onion
+                Architecture for an efficient, scalable solution. The benefit is
+                an inversion of control from its many dependencies and unit test
+                robustness on extremely critical eCom business rules. <br />•
+                Showcased exemplary leadership as a Track Lead, spearheading a
+                team that achieved a noteworthy 40% boost in project completion
+                rates. This accomplishment stems from my dedicated focus on
+                continuous discovery, delivery, adaptation and refinement
+                throughout SDLC stemming from the Agile manifesto. <br />•
+                Achieved a 32% lift in product conversion in the US and Canada,
+                a 29% lift in India, and a 112% lift everywhere else with a
+                navigational rewrite. This rewrite also boosted the CSAT
+                conversion from 64% to 74% in terms of ease of navigation <br />
+                • Increased efficiency and performance of Vertical Video (and
+                thereby the entire application) by 420% on the Android discover
+                tab, and elevated scrolling editorials through pagination of the
+                entire application. The improvements were achieved by upgrading
+                to ExoPlayer, extending bridge code, and implementing an
+                app-wide video handling process
+              </p>
+              <p>
+                *Please refer to my resume for a comprehensive overview of the
+                key technologies I've been actively involved with.
               </p>
             </div>
           </Zoom>
