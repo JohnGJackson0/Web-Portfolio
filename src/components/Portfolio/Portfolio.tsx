@@ -44,8 +44,6 @@ import "react-popupbox/dist/react-popupbox.css";
 // @ts-ignore
 import { PortfolioImageBox } from "./PortfolioImageBox";
 // @ts-ignore
-import { PortfolioQuote } from "./PortfolioQuote";
-// @ts-ignore
 import Zoom from "react-reveal/Zoom";
 // @ts-ignore
 import { StatyModal } from "./StatyModal";
@@ -404,10 +402,6 @@ const Portfolio = () => {
                   "IMS Auto Store App"
                 )}
 
-                {PortfolioQuote(
-                  "I learned that evolutionary prototypes are too much work for many scenerios. However they come in handy when developers find themselves unable to predict impediements like with library integrations. Always recommend at least a quick wireframe at the start of a development cycle. -- John Jackson"
-                )}
-
                 {PortfolioImageBox(
                   () => setShowIMSAuto(true),
                   AUTO3,
@@ -485,9 +479,6 @@ const Portfolio = () => {
                   Staty2,
                   "Staty - Statistics App"
                 )}
-                {PortfolioQuote(
-                  "The world is manipulated by bad statistics and studies. We want to arm society by making a statistics learning platform that can be digested by regular everyday people. By remaking goStat in a multiplatform enviornment such as Flutter it finally has the accessability needed for that goal. No need for $100 calculators and convoluted solutions meant for professionals only. -- John Jackson"
-                )}
 
                 {PortfolioImageBox(
                   () => setShowStaty(true),
@@ -529,10 +520,6 @@ const Portfolio = () => {
                   () => setShowGoDo(true),
                   GoDo3,
                   "Godo - TODO App"
-                )}
-
-                {PortfolioQuote(
-                  '"oh "yuck" another task manager in a portfolio..". Nope, It is a social network for coordinating tasks in a family unit, company or other groups complete with login and task synchronization with multiple accounts. Give me some credit.. micro-architecture, utc, react native multi platform, and more. This has become an example of clean architecture and how it can make UTC amazingly eazy. -- John Jackson'
                 )}
                 {PortfolioImageBox(
                   () => setShowGoDo(true),
@@ -607,9 +594,6 @@ const Portfolio = () => {
                 () => setShowGoStat(true),
                 GoStat2,
                 "GoStat - Statistics App"
-              )}
-              {PortfolioQuote(
-                "I guess I just love statistics. However, I also love quality. I built this app so quickly it became extremely hard to maintain and update it to Kotlin. At the time I also felt the need for it to be multi-platform, so I remade it in Flutter instead!  -- John Jackson"
               )}
               {PortfolioImageBox(
                 () => setShowGoStat(true),
