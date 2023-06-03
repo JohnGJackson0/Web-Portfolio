@@ -142,6 +142,21 @@ const Portfolio = () => {
                   className="portfolio-btn"
                   style={{
                     backgroundColor:
+                      platformContent === PlatformNavigation.REACTNATIVE
+                        ? "#f9ab00"
+                        : "transparent",
+                  }}
+                  onClick={() => {
+                    setPortfolioContent(PortfolioStatus.NONE);
+                    setPlatformContent(PlatformNavigation.REACTNATIVE);
+                  }}
+                >
+                  React Native
+                </button>
+                <button
+                  className="portfolio-btn"
+                  style={{
+                    backgroundColor:
                       platformContent === PlatformNavigation.FLUTTER
                         ? "#f9ab00"
                         : "transparent",
@@ -153,21 +168,6 @@ const Portfolio = () => {
                   }}
                 >
                   Flutter
-                </button>
-                <button
-                  className="portfolio-btn"
-                  style={{
-                    backgroundColor:
-                      platformContent === PlatformNavigation.REACTNATIVE
-                        ? "#f9ab00"
-                        : "transparent",
-                  }}
-                  onClick={() => {
-                    setPortfolioContent(PortfolioStatus.NONE);
-                    setPlatformContent(PlatformNavigation.REACTNATIVE);
-                  }}
-                >
-                  React Native
                 </button>
                 <button
                   className="portfolio-btn"
