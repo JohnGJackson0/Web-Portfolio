@@ -33,19 +33,6 @@ const Footer = () => {
               </div>
             </Zoom>
           </div>
-          <div className="col-lg-3 col-md-2 col-sm-6">
-            <Zoom>
-              <div className="row">
-                <div className="col">
-                  <a href="home" className="footer-nav">
-                    Back to top
-                  </a>{" "}
-                  <br />
-                  <br />
-                </div>
-              </div>
-            </Zoom>
-          </div>
           <div className="col-lg-5 col-md-5 col-sm-6 align-items-center">
             <Zoom>
               <div className="d-flex justify-content-center">
