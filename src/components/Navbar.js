@@ -60,17 +60,6 @@ const Navbar = () => {
             <li className="nav-item">
               <Link
                 smooth={true}
-                to="experience"
-                offset={-65}
-                className="nav-link"
-                href="#"
-              >
-                experience
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                smooth={true}
                 to="portfolio"
                 offset={-65}
                 className="nav-link"

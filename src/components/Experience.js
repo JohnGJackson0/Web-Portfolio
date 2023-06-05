@@ -21,42 +21,22 @@ const Experience = () => {
         <div className="timeline-block timeline-block-right">
           <div className="marker"></div>
           <Zoom>
-            <div className="timeline-content">
-              <h3>November 2018 - Jan 2021</h3>
-              <p>
-                • Demonstrated proficiency in Android development with Java,
-                ORM, and advanced architectures like MVX and MVC. Utilized
-                observers, DIAP, and SOLID principles to develop robust and
-                high-performance mobile applications.
-                <br />• Tackled complex programming challenges effectively,
-                implemented innovative solutions that enhanced user experiences
-                and improved business results. These solutions also set the
-                groundwork for future development. <br />
-                •Mastered Android SDK and adopted advanced performance tuning
-                and debugging techniques. This expertise contributed to a
-                seamless development process and high-quality, stable
-                applications. <br />• Committed to continuous learning, staying
-                updated with the latest Android development trends. This
-                commitment contributed to skill enhancement and the discovery of
-                innovative ways to improve mobile application quality and
-                functionality.
-              </p>
+            <div className="timeline-block timeline-block-left">
+              <div className="marker"></div>
+              <Zoom>
+                <div className="timeline-content">
+                  <h3>Decemeber 2021</h3>
+                  <p>
+                    Obtained a Bachelor's Degree in Computer Science with a
+                    focus on Computer Programming from Baker College. Graduated
+                    with high distinction, earning Magna Cum Laude honors.
+                  </p>
+                </div>
+              </Zoom>
             </div>
           </Zoom>
         </div>
-        <div className="timeline-block timeline-block-left">
-          <div className="marker"></div>
-          <Zoom>
-            <div className="timeline-content">
-              <h3>Decemeber 2021</h3>
-              <p>
-                Obtained a Bachelor's Degree in Computer Science with a focus on
-                Computer Programming from Baker College. Graduated with high
-                distinction, earning Magna Cum Laude honors.
-              </p>
-            </div>
-          </Zoom>
-        </div>
+
         <div className="timeline-block timeline-block-right">
           <div className="marker"></div>
           <Zoom>
