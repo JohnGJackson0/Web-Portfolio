@@ -1,5 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
+import AUTH1 from "../../images/AUTH1.png";
+import AUTH2 from "../../images/AUTH2.png";
+import AUTH3 from "../../images/AUTH3.png";
+import AUTH4 from "../../images/AUTH4.png";
 import REPO1 from "../../images/REPO1.png";
 import AUTO1 from "../../images/AUTO1.png";
 import AUTO2 from "../../images/AUTO2.png";
@@ -58,8 +62,10 @@ import { IMSAutoModal } from "./IMSAutoModal";
 import { S3BucketModal } from "./S3BucketModal";
 import { RestfulModal } from "./RestfulModal";
 import { MernModal } from "./MernModal";
+import { AUTHModal } from "./AuthModal";
 
 enum PortfolioStatus {
+  AUTH = "auth",
   STATY = "staty",
   GODO = "GoDo",
   GOSTAT = "goStat",
@@ -80,15 +86,16 @@ enum PlatformNavigation {
 
 const Portfolio = () => {
   const [platformContent, setPlatformContent] = useState(
-    PlatformNavigation.FLUTTER
+    PlatformNavigation.REACTNATIVE
   );
   const [portfolioContent, setPortfolioContent] = useState(
-    PortfolioStatus.STATY
+    PortfolioStatus.AUTH
   );
 
   // for modals
   const [showStaty, setShowStaty] = useState(false);
   const [showGoDo, setShowGoDo] = useState(false);
+  const [showAuth, setShowAuth] = useState(false);
   const [showMyNutrition, setShowMyNutrition] = useState(false);
   const [showGoStat, setShowGoStat] = useState(false);
   const [showQuickNotes, setShowQuickNotes] = useState(false);
@@ -117,6 +124,10 @@ const Portfolio = () => {
       {showGoDo &&
         GodoModal(showGoDo, () => {
           setShowGoDo(false);
+        })}
+      {showAuth &&
+        AUTHModal(showAuth, () => {
+          setShowAuth(false);
         })}
       {showMyNutrition &&
         MyNutritionModal(showMyNutrition, () => {
@@ -238,6 +249,22 @@ const Portfolio = () => {
                     }}
                   >
                     GoDo
+                  </button>
+                )}
+                {platformContent === PlatformNavigation.REACTNATIVE && (
+                  <button
+                    className="portfolio-btn"
+                    style={{
+                      backgroundColor:
+                        portfolioContent === PortfolioStatus.AUTH
+                          ? "#f9ab00"
+                          : "transparent",
+                    }}
+                    onClick={() => {
+                      setPortfolioContent(PortfolioStatus.AUTH);
+                    }}
+                  >
+                    AWS Login
                   </button>
                 )}
                 {platformContent === PlatformNavigation.REACTNATIVE && (
@@ -573,6 +600,39 @@ const Portfolio = () => {
                   () => setShowMyNutrition(true),
                   MyNutrition5,
                   "MyNutrition - Diet App"
+                )}
+              </div>
+            </>
+          )}
+
+          {portfolioContent === PortfolioStatus.AUTH && (
+            <>
+              <Zoom>
+                <h3 className="text-uppercase text-center py-5">
+                  Clean Architecture Login Template
+                </h3>
+              </Zoom>
+
+              <div className="image-box-wrapper row row-cols-auto justify-content-center ">
+                {PortfolioImageBox(
+                  () => setShowAuth(true),
+                  AUTH1,
+                  "Authentication Project"
+                )}
+                {PortfolioImageBox(
+                  () => setShowAuth(true),
+                  AUTH2,
+                  "Authentication Project"
+                )}
+                {PortfolioImageBox(
+                  () => setShowAuth(true),
+                  AUTH3,
+                  "Authentication Project"
+                )}
+                {PortfolioImageBox(
+                  () => setShowAuth(true),
+                  AUTH4,
+                  "Authentication Project"
                 )}
               </div>
             </>
