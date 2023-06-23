@@ -12,11 +12,11 @@ const Services = () => {
         <div className="row">
           {serviceBox(
             "React Native",
-            "I have diligently maintained, performed unit testing, and designed solutions for extensive production applications using the React Native library."
+            "I have diligently maintained, performed unit testing, and designed solutions for React Native."
           )}
           {serviceBox(
             "Flutter",
-            "I possess a strong proficiency in delivering, conducting unit tests, and architecting numerous Flutter applications utilizing Bloc, Riverpod, ect."
+            "I possess a strong proficiency in delivering full Flutter Applications."
           )}
           {serviceBox(
             "React Web",
@@ -24,7 +24,7 @@ const Services = () => {
           )}
           {serviceBox(
             "Android",
-            "I have hands-on experience in Java and Android development, having worked extensively with tools such as Android Studio and the Android SDK."
+            "I have hands-on experience in Java and Android development."
           )}
         </div>
       </div>

@@ -442,6 +442,50 @@ h3 {
   }
 }
 
+/** ARTICLES **/
+
+.articles {
+  text-align: center;
+}
+
+.articles h1 {
+  color: var(--primary-orange);
+  padding: 1.3rem 0;
+  text-transform: uppercase;
+}
+
+.article-card {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background: var(--primary-dark) !important;
+}
+
+.article-card:hover {
+  transform: scale(1.03);
+  border-radius: 5px;
+  border-color: var(--primary-hover-red);
+  background: var(--primary-orange) !important;
+}
+
+.article-card-image {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.article-card-title {
+  color: white;
+}
+
+.article-card-subtitle {
+  color: gray;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /************ CONTACTME ************/
 
 .contacts {
