@@ -3,17 +3,21 @@ import ArticleCard from "./ArticleCard";
 import ArticleFold from "../images/ARTICLE_FOLD.png";
 import DPArticle from "../images/DPARTICLE.png";
 import DIAP from "../images/DIAP.png";
+import CleanArch from "../images/CleanArch.png";
+import TestingStrategy from "../images/TestingStrategy.jpeg";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+// @ts-ignore
 import Zoom from "react-reveal/Zoom";
 
-const EitherFoldArticle = {
-  title: "How Either & Fold can help propagate Errors Better",
+const TestingStrategyArticle = {
+  title:
+    "A Closer Look at The Bizarre Testing Strategies of Most Modern Applications",
   subtitle:
-    "It's a widely recognized fact that JavaScript at its core isn't the unrivaled superior language ever conceived. Instead, contemporary languages like Go or Rust could claim this title. These languages",
-  imgUrl: ArticleFold,
-  link: "https://www.linkedin.com/pulse/how-either-fold-can-help-propagate-errors-better-react-john-jackson/?trackingId=XYHal2xPQY%2BwSlM3gtlORg%3D%3D",
+    "It's startling how many developers undervalue unit tests or misunderstand their true potential. Unfortunately, I've found that most people and companies approach testing all wrong,",
+  imgUrl: TestingStrategy,
+  link: "https://www.linkedin.com/pulse/closer-look-bizarre-testing-strategies-most-modern-john-jackson/",
 };
 
 const dpArticle = {
@@ -24,31 +28,31 @@ const dpArticle = {
   link: "https://www.linkedin.com/pulse/lost-superpower-dependency-injection-react-john-jackson/?trackingId=huQjAtlXQBOJCS%2FfpNzavQ%3D%3D",
 };
 
-const diapArticle = {
-  title: "Why you should use Dependency Injection in React",
+const cleanArchArticle = {
+  title: "Simple Understanding of Clean Architecture in React Native",
   subtitle:
-    "In the previous article, I highlighted the benefits of employing Dependency Injection within React applications. Now, with this piece, my goal is to underscore how Dependency",
-  imgUrl: DIAP,
-  link: "https://www.linkedin.com/pulse/why-you-should-use-diap-react-john-jackson/?trackingId=huQjAtlXQBOJCS%2FfpNzavQ%3D%3D",
+    "In the vast landscape of software development, a segment of developers seeks to optimize their applications by closely tailoring them to the underlying infrastructure, ",
+  imgUrl: CleanArch,
+  link: "https://www.linkedin.com/pulse/simple-understanding-clean-architecture-react-native-john-jackson/?trackingId=EeqM2Q7vTgeeO93MLneT8A%3D%3D",
 };
 
 export const Articles = () => {
   return (
     <div className="mainBackground articles">
       <Zoom>
-        <h1 className="py-5">Articles</h1>
+        <h1 className="py-5">Blog</h1>
       </Zoom>
       <Container>
         <Zoom>
           <Row>
             <Col xs={12} md={6} lg={4}>
-              <ArticleCard article={EitherFoldArticle} />
+              <ArticleCard article={TestingStrategyArticle} />
             </Col>
             <Col xs={12} md={6} lg={4}>
               <ArticleCard article={dpArticle} />
             </Col>
             <Col xs={12} md={6} lg={4}>
-              <ArticleCard article={diapArticle} />
+              <ArticleCard article={cleanArchArticle} />
             </Col>
           </Row>
         </Zoom>
