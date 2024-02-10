@@ -147,78 +147,77 @@ const Portfolio = () => {
         </Zoom>
         <div>
           <Zoom>
-            <div className="row">
+            <div className="row dropdown-appear-above-content">
               <div className="wrap">
-                <button
-                  className="portfolio-btn"
-                  style={{
-                    backgroundColor:
-                      platformContent === PlatformNavigation.REACTNATIVE
-                        ? "#f9ab00"
-                        : "transparent",
-                  }}
-                  onClick={() => {
-                    setPortfolioContent(PortfolioStatus.NONE);
-                    setPlatformContent(PlatformNavigation.REACTNATIVE);
-                  }}
-                >
-                  React Native
-                </button>
-                <button
-                  className="portfolio-btn"
-                  style={{
-                    backgroundColor:
-                      platformContent === PlatformNavigation.FLUTTER
-                        ? "#f9ab00"
-                        : "transparent",
-                  }}
-                  onClick={() => {
-                    // only one project, lets select automatically
-                    setPortfolioContent(PortfolioStatus.STATY);
-                    setPlatformContent(PlatformNavigation.FLUTTER);
-                  }}
-                >
-                  Flutter
-                </button>
-                <button
-                  className="portfolio-btn"
-                  style={{
-                    backgroundColor:
-                      platformContent === PlatformNavigation.ANDROID
-                        ? "#f9ab00"
-                        : "transparent",
-                  }}
-                  onClick={() => {
-                    setPortfolioContent(PortfolioStatus.NONE);
-                    setPlatformContent(PlatformNavigation.ANDROID);
-                  }}
-                >
-                  Android
-                </button>
-                {
+                <div className="dropdown">
                   <button
-                    className="portfolio-btn"
-                    style={{
-                      backgroundColor:
-                        platformContent === PlatformNavigation.BACKEND
-                          ? "#f9ab00"
-                          : "transparent",
-                    }}
-                    onClick={() => {
-                      setPortfolioContent(PortfolioStatus.NONE);
-                      setPlatformContent(PlatformNavigation.BACKEND);
-                    }}
+                    className="dropdown-toggle portfolio-btn "
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
                   >
-                    Backend
+                    Select a different Technology
                   </button>
-                }
+
+                  <ul
+                    className="dropdown-menu dropdown-menu-dark"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <li>
+                      <button
+                        className="dropdown-item"
+                        onClick={() => {
+                          setPortfolioContent(PortfolioStatus.NONE);
+                          setPlatformContent(PlatformNavigation.REACTNATIVE);
+                        }}
+                      >
+                        React Native
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        className="dropdown-item"
+                        onClick={() => {
+                          setPortfolioContent(PortfolioStatus.NONE);
+                          setPlatformContent(PlatformNavigation.ANDROID);
+                        }}
+                      >
+                        Android
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        className="dropdown-item"
+                        onClick={() => {
+                          // only 1 so select automatically
+                          setPortfolioContent(PortfolioStatus.STATY);
+                          setPlatformContent(PlatformNavigation.FLUTTER);
+                        }}
+                      >
+                        Flutter
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        className="dropdown-item"
+                        onClick={() => {
+                          setPortfolioContent(PortfolioStatus.NONE);
+                          setPlatformContent(PlatformNavigation.BACKEND);
+                        }}
+                      >
+                        Backend
+                      </button>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-
+            <div className="row center">
+              <p className="wrap">Select a project to View</p>
+            </div>
             <div className="row">
               <div className="wrap">
-                Select a Project
-                <FaAngleDoubleRight />
                 {platformContent === PlatformNavigation.FLUTTER && (
                   <button
                     className="portfolio-btn"

@@ -616,3 +616,9 @@ textarea.form-control {
 .footer a {
   color: var(--primary-dark-grey);
 }
+
+.dropdown-appear-above-content {
+  position: relative;
+  z-index: 10000;
+  overflow: visible;
+}
