@@ -105,7 +105,7 @@ const Portfolio = () => {
   const [showMern, setShowMern] = useState(false);
 
   return (
-    <div id="portfolio" className="portfolio-wrapper mainBackground">
+    <div id="portfolio" className="portfolio-wrapper">
       {showMern && MernModal(showMern, () => setShowMern(false))}
       {showRestfulService &&
         RestfulModal(showRestfulService, () => setShowRestfulService(false))}
@@ -157,7 +157,7 @@ const Portfolio = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Select a different Technology
+                    Change Tech-Stack
                   </button>
 
                   <ul
@@ -214,7 +214,7 @@ const Portfolio = () => {
               </div>
             </div>
             <div className="row center">
-              <p className="wrap">Select a project to View</p>
+              <p className="wrap mt-2">Select a project to View</p>
             </div>
             <div className="row">
               <div className="wrap">
@@ -234,70 +234,73 @@ const Portfolio = () => {
                     Staty
                   </button>
                 )}
-                {platformContent === PlatformNavigation.REACTNATIVE && (
-                  <button
-                    className="portfolio-btn"
-                    style={{
-                      backgroundColor:
-                        portfolioContent === PortfolioStatus.GODO
-                          ? "#f9ab00"
-                          : "transparent",
-                    }}
-                    onClick={() => {
-                      setPortfolioContent(PortfolioStatus.GODO);
-                    }}
-                  >
-                    GoDo
-                  </button>
-                )}
-                {platformContent === PlatformNavigation.REACTNATIVE && (
-                  <button
-                    className="portfolio-btn"
-                    style={{
-                      backgroundColor:
-                        portfolioContent === PortfolioStatus.AUTH
-                          ? "#f9ab00"
-                          : "transparent",
-                    }}
-                    onClick={() => {
-                      setPortfolioContent(PortfolioStatus.AUTH);
-                    }}
-                  >
-                    AWS Login
-                  </button>
-                )}
-                {platformContent === PlatformNavigation.REACTNATIVE && (
-                  <button
-                    className="portfolio-btn"
-                    style={{
-                      backgroundColor:
-                        portfolioContent === PortfolioStatus.QUICKNOTES
-                          ? "#f9ab00"
-                          : "transparent",
-                    }}
-                    onClick={() => {
-                      setPortfolioContent(PortfolioStatus.QUICKNOTES);
-                    }}
-                  >
-                    Quick Notes
-                  </button>
-                )}
-                {platformContent === PlatformNavigation.REACTNATIVE && (
-                  <button
-                    className="portfolio-btn"
-                    style={{
-                      backgroundColor:
-                        portfolioContent === PortfolioStatus.MYNUTRITION
-                          ? "#f9ab00"
-                          : "transparent",
-                    }}
-                    onClick={() => {
-                      setPortfolioContent(PortfolioStatus.MYNUTRITION);
-                    }}
-                  >
-                    My Nutrition
-                  </button>
-                )}
+                <div className="center">
+                  {platformContent === PlatformNavigation.REACTNATIVE && (
+                    <button
+                      className="portfolio-btn"
+                      style={{
+                        backgroundColor:
+                          portfolioContent === PortfolioStatus.GODO
+                            ? "#f9ab00"
+                            : "transparent",
+                      }}
+                      onClick={() => {
+                        setPortfolioContent(PortfolioStatus.GODO);
+                      }}
+                    >
+                      GoDo
+                    </button>
+                  )}
+                  {platformContent === PlatformNavigation.REACTNATIVE && (
+                    <button
+                      className="portfolio-btn"
+                      style={{
+                        backgroundColor:
+                          portfolioContent === PortfolioStatus.AUTH
+                            ? "#f9ab00"
+                            : "transparent",
+                      }}
+                      onClick={() => {
+                        setPortfolioContent(PortfolioStatus.AUTH);
+                      }}
+                    >
+                      AWS Login
+                    </button>
+                  )}
+                  {platformContent === PlatformNavigation.REACTNATIVE && (
+                    <button
+                      className="portfolio-btn"
+                      style={{
+                        backgroundColor:
+                          portfolioContent === PortfolioStatus.QUICKNOTES
+                            ? "#f9ab00"
+                            : "transparent",
+                      }}
+                      onClick={() => {
+                        setPortfolioContent(PortfolioStatus.QUICKNOTES);
+                      }}
+                    >
+                      Quick Notes
+                    </button>
+                  )}
+                  {platformContent === PlatformNavigation.REACTNATIVE && (
+                    <button
+                      className="portfolio-btn"
+                      style={{
+                        backgroundColor:
+                          portfolioContent === PortfolioStatus.MYNUTRITION
+                            ? "#f9ab00"
+                            : "transparent",
+                      }}
+                      onClick={() => {
+                        setPortfolioContent(PortfolioStatus.MYNUTRITION);
+                      }}
+                    >
+                      My Nutrition
+                    </button>
+                  )}
+                </div>
+
                 {platformContent === PlatformNavigation.ANDROID && (
                   <button
                     className="portfolio-btn"

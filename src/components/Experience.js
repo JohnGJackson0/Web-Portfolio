@@ -3,7 +3,7 @@ import Zoom from "react-reveal/Zoom";
 
 const Experience = () => {
   return (
-    <div id="experience" className="experience mainBackground">
+    <div id="experience" className="experience">
       <Zoom>
         <div className="d-flex justify-content-center my-5">
           <h1>experience</h1>

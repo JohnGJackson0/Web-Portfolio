@@ -38,7 +38,7 @@ const cleanArchArticle = {
 
 export const Articles = () => {
   return (
-    <div className="mainBackground articles">
+    <div className="articles">
       <Zoom>
         <h1 className="py-5">Blog</h1>
       </Zoom>

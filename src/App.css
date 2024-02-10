@@ -69,6 +69,8 @@ p {
 
 .mainBackground {
   background-color: var(--primary-dark);
+  min-width: 300px;
+  overflow: hidden;
 }
 
 .offsetBackground {

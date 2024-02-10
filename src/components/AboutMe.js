@@ -3,7 +3,7 @@ import Zoom from "react-reveal/Zoom";
 
 const AboutMe = () => {
   return (
-    <div id="about" className="mainBackground">
+    <div id="about">
       <div className="container py-5">
         <div className="row">
           <Zoom>

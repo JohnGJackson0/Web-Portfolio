@@ -4,7 +4,7 @@ import { serviceBox } from "./ServiceBox";
 
 const Services = () => {
   return (
-    <div id="services" className="services mainBackground">
+    <div id="services" className="services">
       <Zoom>
         <h1 className="py-5">Services</h1>
       </Zoom>

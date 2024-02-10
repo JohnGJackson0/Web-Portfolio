@@ -11,7 +11,7 @@ import { Articles } from "./components/Articles";
 
 function App() {
   return (
-    <>
+    <div className="mainBackground">
       <Navbar />
       <Header />
       <About />
@@ -20,7 +20,7 @@ function App() {
       <Portfolio />
       <ContactMe />
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -6,14 +6,16 @@ import { FaAngleDoubleDown } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <div id="home" className="header-wrapper mainBackground">
+    <div id="home" className="header-wrapper">
       <div className="main-info">
-        <div className="row align-items-center">
-          <div className="col-lg-6 col-md-6 col-sm-12 justify-content-center">
+        <div className="row wrap">
+          <div className="col-lg-6 col-md-6 col-sm-12">
             <Zoom>
               <h1>Hi there, I'm John Jackson.</h1>
             </Zoom>
           </div>
+        </div>
+        <div className="row wrap">
           <div className="col-lg-6 col-md-6 col-sm-12">
             <Zoom>
               <div className="photo-wrap mb-3">
